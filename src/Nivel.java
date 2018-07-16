@@ -12,7 +12,7 @@ public class Nivel {
         this.namenivel = namenivel;
     }
 
-    public List<String> getGrados() {
+    public List<Grado> getGrados() {
         return grados;
     }
 

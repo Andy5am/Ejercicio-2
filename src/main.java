@@ -55,19 +55,35 @@ public class main {
                 case 3:
                     System.out.println("Ingrese el nombre del nivel:");
                     input = new Scanner(System.in);
-                    String estudiante = input.nextLine();
+                    String nivel1 = input.nextLine();
                     for (Nivel a : Niveles) {
-                        if(a.getNamenivel()== nivel) {
+                        if(a.getNamenivel()== nivel1) {
                             System.out.println("Ingrese el nombre del grado:");
                             input = new Scanner(System.in);
                             String grado = input.nextLine();
-                            List<> Grados = new ArrayList<>();
-
-
+                            List<Grado> Grados = a.getGrados();
+                            for (Grado b : Grados) {
+                                if (b.getNameGrado() == grado) {
+                                    System.out.println("Ingrese el nombre del estudiante:");
+                                    input = new Scanner(System.in);
+                                    String estudiante = input.nextLine();
+                                    System.out.println("Ingrese el codigo del estudiante");
+                                    input = new Scanner(System.in);
+                                    int codigo = input.nextInt();
+                                    b.setEstudiante(new Estudiante(codigo, estudiante));
+                                } else {
+                                    System.out.println("No se encuentra el grado");
+                                }
+                            }
+                        } else {
+                            System.out.println("NO existe el nivel");
+                        }
                     }
 
                     break;
                 case 4:
+                    
+
 
                     break;
                 case 5:

@@ -2,6 +2,14 @@ public class Estudiante {
     private int code;
     private String name;
 
+
+    public Estudiante(int code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+}
+
     public int getCode() {
         return code;
     }

@@ -20,7 +20,7 @@ public class Grado {
         return estudiantes;
     }
 
-    public void setEstudiantes(List<String> estudiantes) {
-        this.estudiantes = estudiantes;
+    public void setEstudiante(Estudiante estudiantes) {
+        this.estudiantes.add(Estudiante) = estudiantes;
     }
 }
