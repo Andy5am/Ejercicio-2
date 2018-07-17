@@ -9,9 +9,6 @@ public class Nivel {
         return namenivel;
     }
 
-    public void setNamenivel(String namenivel) {
-        this.namenivel = namenivel;
-    }
 
     public List<Grado> getGrados() {
         return Listagrados;

@@ -13,9 +13,7 @@ public class Grado {
         return nameGrado;
     }
 
-    public void setNameGrado(String nameGrado) {
-        this.nameGrado = nameGrado;
-    }
+
 
     public List<Estudiante> getEstudiantes() {
         return estudiantes;
