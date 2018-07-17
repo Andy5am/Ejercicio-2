@@ -8,7 +8,6 @@ public class Estudiante {
         this.name = name;
     }
 
-}
 
     public int getCode() {
         return code;
@@ -24,5 +23,11 @@ public class Estudiante {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return ""+name+
+        "\n"+code;
     }
 }

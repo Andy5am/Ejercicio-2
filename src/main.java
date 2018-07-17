@@ -41,11 +41,11 @@ public class main {
                     input = new Scanner(System.in);
                     String nivel = input.nextLine();
                     for (Nivel a : Niveles){
-                        if(a.getNamenivel()== nivel) {
+                        if(nivel.equals(a.getNamenivel())) {
                             System.out.println("Ingrese el nombre del grado:");
                             input = new Scanner(System.in);
                             String grado = input.nextLine();
-                            a.setGrados(new Grado (grado));
+                            a.setGrados(new Grado(grado));
 
                         }else {
                             System.out.println("No existe el nivel");
@@ -57,13 +57,13 @@ public class main {
                     input = new Scanner(System.in);
                     String nivel1 = input.nextLine();
                     for (Nivel a : Niveles) {
-                        if(a.getNamenivel()== nivel1) {
+                        if(a.getNamenivel().equals(nivel1)) {
                             System.out.println("Ingrese el nombre del grado:");
                             input = new Scanner(System.in);
                             String grado = input.nextLine();
                             List<Grado> Grados = a.getGrados();
                             for (Grado b : Grados) {
-                                if (b.getNameGrado() == grado) {
+                                if (b.getNameGrado().equals(grado)) {
                                     System.out.println("Ingrese el nombre del estudiante:");
                                     input = new Scanner(System.in);
                                     String estudiante = input.nextLine();
@@ -76,25 +76,56 @@ public class main {
                                 }
                             }
                         } else {
-                            System.out.println("NO existe el nivel");
+                            System.out.println("No existe el nivel");
                         }
                     }
 
                     break;
                 case 4:
-                    
+                    System.out.println("Ingrese el nombre del nivel:");
+                    input = new Scanner(System.in);
+                    String nivel2 = input.nextLine();
+                    for (Nivel c : Niveles) {
+                        if (c.getNamenivel().equals(nivel2)) {
+                            System.out.println("Los grados en "+ nivel2+" son:"+c.getGrados());
 
+                        }else {
+                            System.out.println("No existe ese grado");
+                        }
+                    }
 
                     break;
                 case 5:
+                    System.out.println("Ingrese el nombre del nivel:");
+                    input = new Scanner(System.in);
+                    String nivel3 = input.nextLine();
+                    for (Nivel a : Niveles) {
+                        if(a.getNamenivel().equals(nivel3)) {
+                            System.out.println("Ingrese el nombre del grado:");
+                            input = new Scanner(System.in);
+                            String grado = input.nextLine();
+                            List<Grado> Grados = a.getGrados();
+                            for (Grado b : Grados) {
+                                if (b.getNameGrado().equals(grado)) {
+                                    System.out.println("Los estudiantes en "+grado+" son:"+b.getEstudiantes());
+                                } else {
+                                    System.out.println("No se encuentra el grado");
+                                }
+                            }
+                        } else {
+                            System.out.println("NO existe el nivel");
+                        }
+                    }
+
                     break;
                 case 6:
+                    System.out.println("Hasta luego");
                     control = false;
                     break;
 
             }
 
-        }while (!control);
+        }while (control);
 
     }
 }

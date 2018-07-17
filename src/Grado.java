@@ -1,8 +1,9 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Grado {
     private String nameGrado;
-    private List<String> estudiantes;
+    private List<Estudiante> estudiantes = new ArrayList<>();
 
     public Grado(String nameGrado) {
         this.nameGrado = nameGrado;
@@ -16,11 +17,16 @@ public class Grado {
         this.nameGrado = nameGrado;
     }
 
-    public List<String> getEstudiantes() {
+    public List<Estudiante> getEstudiantes() {
         return estudiantes;
     }
 
     public void setEstudiante(Estudiante estudiantes) {
-        this.estudiantes.add(Estudiante) = estudiantes;
+        this.estudiantes.add(estudiantes);
+    }
+
+    @Override
+    public String toString() {
+        return ""+nameGrado;
     }
 }
